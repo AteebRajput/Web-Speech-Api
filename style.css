@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Shadows+Into+Light&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "PT Sans", sans-serif;
+    position: relative;
+    min-height: 100vh;
+}
+
+nav {
+    background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    height: 75px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 2px solid gray;
+    background-color: lightblue;
+    width: 700px;
+    margin-top: 100px;
+    border-bottom-width: 5px;
+    gap: 5px;
+    position: absolute;
+    top: -100%;
+    z-index: 200;
+    transition: all 1s ease-in-out;
+    padding-bottom: 10px;
+}
+
+form.show{
+    top: 5%;
+    
+}
+form h1 {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding:  10px;
+}
+
+form h1 button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+form h1 button:hover {
+    transform: scale(0.95);
+}
+
+form h1 i {
+    font-size: 25px;
+    width: 30px;
+}
+
+form .form-control {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    padding-bottom: 10px;
+    padding: 10px;
+}
+
+form .form-control label {
+    font-size: 25px;
+    /* padding-bottom: 5px; */
+}
+
+form .form-control select {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+
+.form-control textarea {
+    width: 100%;
+    border-radius: 6px;
+    margin:0 ;
+    font-size: 20px;
+    background-color: whitesmoke;
+    padding: 10px;
+}
+
+.btn {
+    background: linear-gradient(to bottom, lightblue, dodgerblue);
+    border: 0;
+    font-size: 22px;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+#open {
+    margin-top: 100px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    
+    width: 100%;
+}
+
+.box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    border-radius: 5px;
+    gap: 10px;
+    box-shadow: 0 0 8px gray;
+    font-size: 20px;
+    cursor: pointer;
+}
+.box p {
+    padding-bottom: 5px;
+}
+.box img{
+    width: 100%;
+    height: 300px;
+    border-radius: 5px 5px 0 0;
+    object-fit: cover;
+}
+.box:hover{
+    transform: scale(1.1);
+
+}
+
+@media screen and (max-width:940px) {
+    .container{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    form.show{
+        top: 3%;
+    }
+}
+
+@media screen and (max-width:850px) {
+    .container{
+        grid-template-columns: 1fr 1fr;
+    }
+    form{
+        width: 600px;
+    }
+}
+
+@media screen and (max-width:660px) {
+    .container{
+        grid-template-columns: 1fr 1fr;
+    }
+    form{
+        width: 500px;
+    }
+}
+@media screen and (max-width:545px) {
+    .container{
+        grid-template-columns: 1fr;
+    }
+    form{
+        width: 400px;
+    }
+}
+
+@media screen and (max-width:445px) {
+    .container{
+        grid-template-columns: 1fr;
+    }
+    form{
+        width: 300px;
+    }
+    nav{
+        font-size: 30px;
+        height: 60px;
+    }
+}
+
